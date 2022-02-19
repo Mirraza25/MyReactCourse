@@ -1,6 +1,7 @@
 //import ExpenseItem from "./components/ExpenseFiles/ExpenseItem";
-import ExpenseList from "./components/ExpenseFiles/ExpenseList";
-import NewExpense from "./components/NewExpensesComponent/NewExpense";
+import ExpenseList from "./components/ExpenseFiles/ExpensesComponent/ExpenseList";
+import NewExpense from "./components/ExpenseFiles/NewExpensesComponent/NewExpense";
+//import Expensesilter from "./components/ExpenseFiles/ExpensesComponent/Expensesilter";
 function App() {
   const expenses = [
     {
@@ -22,10 +23,16 @@ function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
+
   ];
+  const newExpenseData=(expense)=>{
+    console.log("inApp.js")
+    console.log(expense)
+    
+  }
   return (
     <div>
-      <div><NewExpense/></div>
+      <div><NewExpense newExpenseData={newExpenseData}/></div>
       
      {/* 
       <ExpenseItem title={props.items[0].title} dates={props.items[0].date} amount={props.items[0].amount}/>
