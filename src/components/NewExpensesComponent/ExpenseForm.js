@@ -34,7 +34,7 @@ const ExpenseForm = () => {
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="2022-01-01" max="2024-31-12" />
+          <input type="date" onChange={onDateHandler}min="2022-01-01" max="2024-31-12" />
         </div>
       </div>
       <div className="new-expense__actions">

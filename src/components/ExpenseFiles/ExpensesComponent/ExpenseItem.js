@@ -1,39 +1,20 @@
 import React from "react";
 import "./ExpenseItem.css";
-import ExpenseDate from "./ExpenseDate";
-<<<<<<< HEAD:src/components/ExpenseFiles/ExpensesComponent/ExpenseItem.js
+import ExpenseDate from "./ExpenseDate"
 import Card from "../../UIFolder/Card";
 
 function ExpenseItem(props) {
   
-  const [title, setTitle] = React.useState(props.title);
-
-=======
-import Card from "../UIFolder/Card";
-
-function ExpenseItem(props) {
-  /*const Date1=new Date(2022,1,17)
-    const Day=Date1.toLocaleString('en-US',{day:'2-digit'})
-    const Month=Date1.toLocaleString('en-US',{month:'long'})
-    const Year=Date1.getFullYear()*/
-  const [title, setTitle] = React.useState(props.title);
-
+  const [title, setTitle] = React.useState(props.title)
   const Title = "Capital Title";
   const Amount = 284;
->>>>>>> 7b8c4160ab08111b10bc1a7eca155ef7460e07e4:src/components/ExpenseFiles/ExpenseItem.js
+
   const clickHandler = () => {
     setTitle("Updated")
     console.log(title);
   };
   return (
     <Card className="expense-item">
-      {/*<div>
-          
-          <div>{Month}</div>
-          <div>{Day}</div>
-          <div>{Year}</div>
-      </div>
-      */}
       <ExpenseDate givendate={props.dates} />
 
       <div className="expense-item__description">
@@ -44,5 +25,4 @@ function ExpenseItem(props) {
     </Card>
   );
 }
-
 export default ExpenseItem;
