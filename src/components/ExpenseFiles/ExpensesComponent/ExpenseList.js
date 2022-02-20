@@ -23,6 +23,9 @@ function ExpenseList(props) {
   */}  
     {props.items.map(expense=>
       < ExpenseItem 
+      // A unique  is always necessary for an array.map function 
+      // remember that
+      key={expense.id}
       title={expense.title}
       dates={expense.date}
       amount={expense.amount}/>)}
