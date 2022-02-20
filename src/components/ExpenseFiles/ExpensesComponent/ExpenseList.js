@@ -6,25 +6,32 @@ import Expensesilter from './Expensesilter'
 import { useState } from 'react'
 function ExpenseList(props) {
   const [enterYear,setEnteredYear]=useState('2019')
+  const selectedYear=props.items.filter(element=>
+    {return element.date.getFullYear().toString()===enterYear})
+   
+    
+  
   const selectYearListHandler=givenyear=>
   {
 
     console.log("This is in ExpenseList")
-    console.log(givenyear);
     setEnteredYear(givenyear)
+
   }
+  
   return (
     <div>
     <Card className="expenses">
       
-        <Expensesilter selectedYear={enterYear} yearFunction={selectYearListHandler}/>
+  <Expensesilter yearFunction={selectYearListHandler}/>
  {/**
   * Dynamic 
   */}  
-    {props.items.map(expense=>
+    {selectedYear.map(expense=>
       < ExpenseItem 
       // A unique  is always necessary for an array.map function 
       // remember that
+
       key={expense.id}
       title={expense.title}
       dates={expense.date}
