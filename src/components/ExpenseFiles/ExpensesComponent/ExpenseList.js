@@ -4,6 +4,8 @@ import Card from "../../UIFolder/Card";
 import Expensesilter from "./Expensesilter";
 import OriginalList from "./OriginalList";
 import { useState } from "react";
+import ExpenseChart from "./ExpenseChart";
+//import ExpenseChart from "./ExpenseChart"
 function ExpenseList(props) {
   
   const [enterYear, setEnteredYear] = useState("2019");
@@ -21,6 +23,7 @@ function ExpenseList(props) {
     <li>
 
       <Card className="expenses">
+        <ExpenseChart expenses={selectedYear}/>
         <Expensesilter yearFunction={selectYearListHandler} />
         {/**
          * Dynamic
@@ -50,6 +53,7 @@ function ExpenseList(props) {
       amount={expense.amount}/>))}
     
    */}
+   
    <OriginalList selectedYear={selectedYear}/>
         {/*
        Static

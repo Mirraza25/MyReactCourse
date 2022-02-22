@@ -1,5 +1,6 @@
 //import ExpenseItem from "./components/ExpenseFiles/ExpenseItem";
 import { useState } from "react";
+//import ExpenseChart from "./components/ExpenseFiles/ExpensesComponent/ExpenseChart";
 import ExpenseList from "./components/ExpenseFiles/ExpensesComponent/ExpenseList";
 import NewExpense from "./components/ExpenseFiles/NewExpensesComponent/NewExpense";
 //import Expensesilter from "./components/ExpenseFiles/ExpensesComponent/Expensesilter";
@@ -45,6 +46,7 @@ const [expenses,setExpenses]=useState(Initial_expenses)
       <ExpenseItem title={props.items[2].title} dates={props.items[2].date} amount={props.items[2].amount}/>
       <ExpenseItem title={props.items[3].title} dates={props.items[3].date} amount={props.items[3].amount}/>
       */}
+      
       <ExpenseList items={expenses}/>
     </div>
   );
